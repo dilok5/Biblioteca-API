@@ -111,7 +111,6 @@ Agora, você pode testar as requisições diretamente no **Postman** ou no naveg
       "foto": "https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg"
     }
     ```
-- Se retornar **201 Created**, significa que o livro foi cadastrado com sucesso! ✅
 
 6️⃣ **Rodar o Front-end**
 
