@@ -65,75 +65,72 @@ Se não souber sua senha, tente acessar o MySQL:
 ```sh
 mysql -u root -p
 ```
+4️⃣ **Rodar a Aplicação Back-end**
 
-4️⃣ Rodar a Aplicação Back-end
-Navegue até a pasta do projeto e execute:
+1. Navegue até a pasta do projeto e execute o seguinte comando no terminal:
 
-sh
-Copiar
-Editar
-mvn spring-boot:run
-Ou, caso esteja utilizando IntelliJ ou VS Code, execute a classe LivroApplication (ou Main) e clique em Run ▶️.
+    ```bash
+    mvn spring-boot:run
+    ```
 
-Se tudo estiver correto, você verá no terminal:
+2. Ou, caso esteja utilizando **IntelliJ** ou **VS Code**, execute a classe `LivroApplication` (ou `Main`) e clique em **Run ▶️**.
 
-sh
-Copiar
-Editar
-Tomcat started on port 8080
-Started LivroApplication in X seconds
-Isso significa que a API já está rodando! 🚀
+3. Se tudo estiver correto, você verá no terminal:
 
-5️⃣ Testar a API
-Agora, você pode testar as requisições diretamente no Postman ou no navegador.
+    ```bash
+    Tomcat started on port 8080
+    Started LivroApplication in X seconds
+    ```
 
-➤ Listar Livros (GET)
-Acesse no navegador:
+Isso significa que a API já está rodando!
 
-bash
-Copiar
-Editar
-http://localhost:8080/api/livros/listarLivros
-Ou faça a requisição no Postman:
+5️⃣ **Testar a API**
 
-Método: GET
-URL: http://localhost:8080/api/livros/listarLivros
-➤ Cadastrar Livro (POST)
-Método: POST
-URL: http://localhost:8080/api/livros/cadastrarLivro
-Headers: Content-Type: application/json
-Body (JSON):
-json
-Copiar
-Editar
-{
-    "titulo": "Clean Code",
-    "autor": "Robert C. Martin",
-    "anoPublicacao": 2008,
-    "favorito": true,
-    "foto": "https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg"
-}
-Se retornar 201 Created, significa que o livro foi cadastrado com sucesso! ✅
+Agora, você pode testar as requisições diretamente no **Postman** ou no navegador.
 
-6️⃣ Rodar o Front-end
+### ➤ Listar Livros (GET)
+- Acesse no navegador:
+    ```bash
+    http://localhost:8080/api/livros/listarLivros
+    ```
+- Ou faça a requisição no **Postman**:
+    - **Método**: GET
+    - **URL**: `http://localhost:8080/api/livros/listarLivros`
+
+### ➤ Cadastrar Livro (POST)
+- **Método**: POST
+- **URL**: `http://localhost:8080/api/livros/cadastrarLivro`
+- **Headers**: `Content-Type: application/json`
+- **Body (JSON)**:
+    ```json
+    {
+      "titulo": "Clean Code",
+      "autor": "Robert C. Martin",
+      "anoPublicacao": 2008,
+      "favorito": true,
+      "foto": "https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg"
+    }
+    ```
+- Se retornar **201 Created**, significa que o livro foi cadastrado com sucesso! ✅
+
+6️⃣ **Rodar o Front-end**
+
 Caso já tenha um front-end configurado, vá até a pasta dele e inicie com:
 
-sh
-Copiar
-Editar
+```bash
 npx live-server
+```
 Ou, se preferir:
 
-sh
-Copiar
-Editar
+```bash
 python -m http.server 5500
+```
 Agora, abra no navegador:
 
-arduino
-Copiar
-Editar
+```arduino
 http://127.0.0.1:5500/index.html
-E teste a interação com a API! 🎉
+```
+E teste a interação com a API!
+
 
 
