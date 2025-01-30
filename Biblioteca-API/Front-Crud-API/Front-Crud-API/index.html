@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Livros</h1>
+            <button id="toggleThemeBtn">Trocar Tema</button>
+        </header>
+        <div class="form-container">
+            <h2>Cadastrar Livro</h2>
+            <input type="text" id="titleInput" placeholder="Titulo">
+            <input type="text" id="nameInput" placeholder="Autor">
+            <input type="number" id="yearInput" placeholder="Ano de Publicação">
+            <label>
+                <input type="checkbox" id="favoriteInput"> Favorito
+            </label>
+            <input type="text" id="imageInput" accept="image/*" placeholder="URL Imagem">
+            <button onclick="addBook()">Adicionar Livro</button>
+        </div>
+
+        <section id="cardContainer" class="card-container"></section>
+    </div>
+    <script src="./js/script.js" defer></script>
+</body>
+</html>
